@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getCustomerByIDRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCustomerByIDResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customer" type="tns:customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="customer">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="addres" type="xs:string"/>
+            <xs:element name="contact" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+ </xs:schema>
